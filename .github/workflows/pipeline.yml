@@ -38,15 +38,14 @@ jobs:
     # 5. Ejecutamos los tests unitarios (Lógica pura: PetService)
     - name: Tests Unitarios
       run: |
-        pytest tests/test_unit.py
+        python -m pytest tests/test_unit.py
 
     # 6. IMPORTANTE: Arrancamos tu API en segundo plano
     # El '&' al final es vital para que no bloquee el terminal y pase al siguiente paso
-    - name: Arrancar API
+    - name: Tests End-to-End
       run: |
-        uvicorn app.main:app --host 0.0.0.0 --port 8000 &
-        sleep 5  # Esperamos 5 segundos a que arranque bien
-
+        python -m pytest tests/test_e2e.py
+        
     # 7. Ejecutamos los tests End-to-End contra la API ya encendida
     - name: Tests End-to-End
       run: |
