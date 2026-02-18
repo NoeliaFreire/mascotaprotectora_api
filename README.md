@@ -10,7 +10,7 @@ El servicio permite gestionar el inventario de mascotas de una protectora median
 
 Para cumplir con la simplicidad requerida, la persistencia de datos se realiza **en memoria** (listas de Python), prescindiendo de una base de datos externa. Los datos de entrada y salida se validan estrictamente mediante modelos de **Pydantic**.
 
-### 🚀 2. Pipeline de GitHub Actions
+## 🚀 2. Pipeline de GitHub Actions
 
 El archivo `pipeline.yml` define un workflow que se ejecuta automáticamente en eventos de `push` y `pull_request` hacia la rama `main`.
 
