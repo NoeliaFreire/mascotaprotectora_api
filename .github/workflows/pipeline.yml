@@ -42,11 +42,12 @@ jobs:
 
     # 6. IMPORTANTE: Arrancamos tu API en segundo plano
     # El '&' al final es vital para que no bloquee el terminal y pase al siguiente paso
-    - name: Tests End-to-End
+    - name: Arrancar API
       run: |
-        python -m pytest tests/test_e2e.py
-        
+        uvicorn app.main:app --host 0.0.0.0 --port 8000 &
+        sleep 5  # Esperamos 5 segundos a que arranque bien
+
     # 7. Ejecutamos los tests End-to-End contra la API ya encendida
     - name: Tests End-to-End
       run: |
-        pytest tests/test_e2e.py
+        python -m pytest tests/test_e2e.py
