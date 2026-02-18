@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI 
 from app.models import Mascota, MascotaCreate
 from app.service import pet_service
 

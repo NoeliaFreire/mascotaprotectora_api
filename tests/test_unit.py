@@ -1,7 +1,5 @@
-import pytest
 from app.service import PetService
 from app.models import MascotaCreate
-
 def test_available_young_logic():
     # Setup: Creamos un servicio aislado
     service = PetService()
