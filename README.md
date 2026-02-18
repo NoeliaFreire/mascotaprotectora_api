@@ -1,4 +1,4 @@
-# mascotaprotectora_api# API Protectora de Mascotas 🐾
+# API Protectora de Mascotas 🐾
 
 API REST desarrollada con **FastAPI** para la gestión de mascotas en una protectora. Este proyecto implementa un flujo completo de CI/CD con **GitHub Actions**, incluyendo análisis estático de código, tests unitarios y tests end-to-end (E2E).
 
